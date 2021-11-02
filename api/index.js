@@ -3,6 +3,11 @@ const { v4 } = require('uuid');
 
 const db = require("./db")
 
+const cors = require('cors');
+app.use(cors({
+    origin: '*'
+}));
+
 app.get('/api', (req, res) => {
   const path = `/api/item/${v4()}`;
   res.setHeader('Content-Type', 'text/html');
