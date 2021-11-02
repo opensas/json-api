@@ -15,7 +15,7 @@ app.get('/api/item/:slug', (req, res) => {
   res.end(`Item: ${slug}`);
 });
 
-app.get('/plans/:slug', (req, res) => {
+app.get('/api/plans/:slug', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   const { slug } = req.params;
   const plan = db[slug]
